@@ -22,6 +22,7 @@ struct print_func
 int print_type(char type, va_list params);
 int print_char(va_list content);
 int print_string(va_list content);
+int print_percent(va_list content);
 int _printf(const char *format, ...);
 
 #endif
