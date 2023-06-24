@@ -10,6 +10,8 @@ int _printf(const char *format, ...)
 {
 	va_list params;
 	int i = 0;
+	int data_printed = 0;
+	int format_printed = 0;
 
 	va_start(params, format);
 	for (; format && *(format + i) != '\0'; i++)
@@ -17,15 +19,17 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			print_type(format[i], params);
+			format_printed = print_type(format[i], params);
 		}
 		else
 		{
 			write(1, &format[i], 1);
+			data_printed++;
 		}
 	}
 
 
 	va_end(params);
-	return (0);
+	data_printed += format_printed;
+	return (data_printed);
 }

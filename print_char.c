@@ -10,5 +10,6 @@ int print_char (va_list content)
 {
 	char c = va_arg(content, int);
 
-	return (write(1, &c, 1));
+	write(1, &c, 1);
+	return (1);
 }

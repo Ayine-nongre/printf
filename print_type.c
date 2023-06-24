@@ -10,6 +10,7 @@
 int print_type(char type, va_list params)
 {
 	int i = 0;
+	int printed = 0;
 
 	print_func_t printers[] = {
 		{'c', print_char}
@@ -21,5 +22,5 @@ int print_type(char type, va_list params)
 			return (printers[i].func(params));
 	}
 
-	return (0);
+	return (printed);
 }
