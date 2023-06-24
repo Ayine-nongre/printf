@@ -19,6 +19,10 @@ int _printf(const char *format, ...)
 			i++;
 			print_type(format[i], params);
 		}
+		else
+		{
+			write(1, &format[i], 1);
+		}
 	}
 
 
