@@ -25,10 +25,10 @@ int _printf(const char *format, ...)
 			write(1, &format[i], 1);
 			data_printed++;
 		}
+		data_printed += format_printed;
 	}
 
 
 	va_end(params);
-	data_printed += format_printed;
 	return (data_printed);
 }
