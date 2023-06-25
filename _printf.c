@@ -13,6 +13,9 @@ int _printf(const char *format, ...)
 	int data_printed = 0;
 	int format_printed = 0;
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(params, format);
 	for (; format && *(format + i) != '\0'; i++)
 	{
