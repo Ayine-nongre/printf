@@ -25,5 +25,5 @@ int print_type(char type, va_list params, int *pos)
 		}
 	}
 
-	return (-1);
+	return (0);
 }
