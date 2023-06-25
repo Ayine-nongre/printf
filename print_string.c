@@ -11,7 +11,7 @@ int print_string(va_list content)
 	char *s = va_arg(content, char *);
 	int count = 0;
 	unsigned int i;
-	char *nul = "(nill)";
+	char *nul = "(null)";
 
 	i = 0;
 	if (s == NULL)
