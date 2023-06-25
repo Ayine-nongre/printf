@@ -16,7 +16,6 @@ int _printf(const char *format, ...)
 	va_start(params, format);
 	for (; format && *(format + i) != '\0'; i++)
 	{
-		data_printed += format_printed;
 		if (format[i] == '%')
 		{
 			format_printed = print_type(format[i + 1], params, &i);
