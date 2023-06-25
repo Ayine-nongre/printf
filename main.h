@@ -19,7 +19,7 @@ struct print_func
 	int (*func)(va_list params);
 };
 
-int print_type(char type, va_list params);
+int print_type(char type, va_list params, int *pos);
 int print_char(va_list content);
 int print_string(va_list content);
 int print_percent(va_list content);

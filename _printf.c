@@ -18,8 +18,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			i++;
-			format_printed = print_type(format[i], params);
+			format_printed = print_type(format[i + 1], params, &i);
 		}
 		else
 		{
