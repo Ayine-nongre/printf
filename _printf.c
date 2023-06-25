@@ -19,13 +19,13 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			format_printed = print_type(format[i + 1], params, &i);
+			data_printed += format_printed;
 		}
 		else
 		{
 			write(1, &format[i], 1);
 			data_printed++;
 		}
-		data_printed += format_printed;
 	}
 
 
