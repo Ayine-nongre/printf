@@ -20,8 +20,9 @@ int print_string(va_list content)
 		{
 			write(1, &nul[i], 1);
 			i++;
+			count++;
 		}
-		return (-1);
+		return (count);
 	}
 	while (*(s + i) != '\0')
 	{
