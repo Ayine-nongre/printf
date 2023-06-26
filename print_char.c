@@ -11,7 +11,7 @@ int print_char (va_list content)
 	char c = va_arg(content, int);
 
 	if (c < 32 || c > 126)
-		return (-1);
+		return (0);
 
 	write(1, &c, 1);
 	return (1);
