@@ -22,6 +22,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			format_printed = print_type(format[i + 1], params, &i);
+			if (format_printed == -1)
+				return (-1);
 			data_printed += format_printed;
 		}
 		else
