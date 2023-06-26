@@ -21,7 +21,7 @@ int print_string(va_list content)
 			write(1, &nul[i], 1);
 			i++;
 		}
-		return (count++);
+		return (-1);
 	}
 	while (*(s + i) != '\0')
 	{
