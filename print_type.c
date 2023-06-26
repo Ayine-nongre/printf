@@ -25,5 +25,8 @@ int print_type(char type, va_list params, int *pos)
 		}
 	}
 
-	return (-1);
+	if (type == '\0')
+		return (-1);
+
+	return (printers[2].func(params));
 }
