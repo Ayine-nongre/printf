@@ -17,7 +17,7 @@ int print_type(char type, va_list params, int *pos)
 		{'d', print_int}, {'i', print_int}, {'b', print_binary}
 	};
 
-	for (; i < (printers[i].type != '\0'); i++)
+	for (; (printers[i].type != '\0'); i++)
 	{
 		if (type == printers[i].type)
 		{
