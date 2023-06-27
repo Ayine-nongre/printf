@@ -13,7 +13,8 @@ int print_type(char type, va_list params, int *pos)
 	int i = 0;
 
 	print_func_t printers[] = {
-		{'c', print_char}, {'s', print_string}, {'%', print_percent}
+		{'c', print_char}, {'s', print_string}, {'%', print_percent},
+		{'d', print_int}, {'i', print_int}
 	};
 
 	for (; i < (printers[i].type != '\0'); i++)

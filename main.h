@@ -23,6 +23,9 @@ int print_type(char type, va_list params, int *pos);
 int print_char(va_list content);
 int print_string(va_list content);
 int print_percent(va_list content);
+int print_int(va_list content);
+int positive(int value);
+int negative(int value);
 int _printf(const char *format, ...);
 
 #endif
