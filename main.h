@@ -26,6 +26,7 @@ int print_percent(va_list content);
 int print_int(va_list content);
 int positive(int value);
 int negative(int value);
+int print_binary(va_list content);
 int _printf(const char *format, ...);
 
 #endif
