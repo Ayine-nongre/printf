@@ -11,7 +11,7 @@ int print_binary(va_list content)
 	int num = va_arg(content, int);
 	int temp = num;
 	int rem;
-	int i = 1;
+	int i = 0;
 	int count = 0;
 	char *arr;
 
@@ -39,7 +39,7 @@ int print_binary(va_list content)
 	while (i >= 0)
 	{
 		write(1, &arr[1], 1);
-		i++;
+		i--;
 	}
 
 	return (count);
