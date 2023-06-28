@@ -9,20 +9,38 @@
 int print_binary(va_list content)
 {
 	int num = va_arg(content, int);
-
-	long bin = 0;
+	int temp = num;
 	int rem;
 	int i = 1;
 	int count = 0;
+	char *arr;
+
+	while (temp != 0)
+	{
+		temp /= 2;
+		count++;
+	}
+
+	arr = malloc(sizeof(char) * count);
+	if (arr == NULL)
+	{
+		free(arr);
+		return (-1);
+	}
 
 	while (num != 0)
 	{
 		rem = num % 2;
 		num /= 2;
-		bin += rem * i;
-		i *= 10;
+		arr[i] = rem + 48;
+		i++;
 	}
 
-	count = positive(bin);
+	while (i >= 0)
+	{
+		write(1, &arr[1], 1);
+		i++;
+	}
+
 	return (count);
 }
