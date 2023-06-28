@@ -22,11 +22,6 @@ int print_binary(va_list content)
 	}
 
 	arr = malloc(sizeof(char) * count);
-	if (arr == NULL)
-	{
-		free(arr);
-		return (-1);
-	}
 
 	while (num != 0)
 	{
@@ -38,9 +33,8 @@ int print_binary(va_list content)
 
 	while (i >= 0)
 	{
-		write(1, &arr[1], 1);
+		write(1, &arr[i], 1);
 		i--;
 	}
-
 	return (count);
 }
