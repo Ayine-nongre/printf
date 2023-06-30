@@ -14,7 +14,8 @@ int print_type(char type, va_list params, int *pos)
 
 	print_func_t printers[] = {
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
-		{'d', print_int}, {'i', print_int}, {'b', print_binary}
+		{'d', print_int}, {'i', print_int}, {'b', print_binary},
+		{'r', print_reverse}
 	};
 
 	for (; (printers[i].type != '\0'); i++)
