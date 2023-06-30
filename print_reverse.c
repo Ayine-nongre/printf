@@ -10,7 +10,7 @@ int print_reverse(va_list content)
 {
 	char *s = va_arg(content, char *);
 	int count = 0;
-	unsigned int i;
+	int i;
 	char *nul = "(llun)";
 
 	i = 0;
@@ -29,7 +29,7 @@ int print_reverse(va_list content)
 		count++;
 
 	i = count;
-	while (i != 0)
+	while (i != -1)
 	{
 		write(1, &s[i], 1);
 		i--;
