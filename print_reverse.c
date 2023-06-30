@@ -8,16 +8,31 @@
 
 int print_reverse(va_list content)
 {
-	char *str = va_arg(content, char *);
+	char *s = va_arg(content, char *);
 	int count = 0;
+	unsigned int i;
+	char *nul = "(llun)";
 
-	while (*(str + count) != '\0')
+	i = 0;
+	if (s == NULL)
+	{
+		while (i < 6)
+		{
+			write(1, &nul[i], 1);
+			i++;
+			count++;
+		}
+		return (count);
+	}
+
+	while (*(s + count) != '\0')
 		count++;
 
-	while (count != 0)
+	i = count;
+	while (i != 0)
 	{
-		write(1, &str[count], 1);
-		count--;
+		write(1, &s[i], 1);
+		i--;
 	}
 
 	return (count);
